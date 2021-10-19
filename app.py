@@ -16,11 +16,11 @@ def predict():
     if request.method == 'POST':
         print(request.form.get('Nitrogen'))
         try:
-            N=float(request.form['Nitrogen'])
-            P=float(request.form['Phosphorous'])
-            K=float(request.form['Pottasium'])
-            ph=float(request.form['ph level'])
-            rainfall=float(request.form['rainfall(in mm)'])
+            N=float(request.form['N'])
+            P=float(request.form['P'])
+            K=float(request.form['K'])
+            ph=float(request.form['ph'])
+            rainfall=float(request.form['rainfall'])
             pred_args= [N,P,K,ph,rainfall]
             pred_args_arr = np.array(pred_args)
             pred_args_arr=pred_args_arr.reshape(1,-1)
