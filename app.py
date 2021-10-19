@@ -14,7 +14,7 @@ def home():
 @app.route('/predict',methods=['GET','POST'])
 def predict():
     if request.method == 'POST':
-        print(request.form.get('Status'))
+        print(request.form.get('Nitrogen'))
         try:
             N=float(request.form['Nitrogen'])
             P=float(request.form['Phosphorous'])
