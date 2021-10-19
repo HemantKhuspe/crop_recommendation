@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html > 
+<head>
+  <meta charset="UTF-8">
+  <title>Crop</title> 
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  
+</head>
+<body> 
+<div class="login"> 
+<h1 style = "font-size:25px;">Crop Recommendation</h1> 
+<center> 
+   <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">        
+    	<input type="number" name="Nitrogen" placeholder="Enter a value(Example:50)" required="required" />
+    	<br>
+        <input type="number" name="Phosphorous" placeholder="Enter a value(Example:50)" required="required" step="any" />
+        <br>
+		<input type="number" name="Pottasium" placeholder="Enter a value(Example:50)" required="required"  step="any" />
+		<br>
+        <input type="number" name="ph level" placeholder="Enter the value" required="required"  step="any" />
+        <br>
+        <input type="number" name="Rainfall (in mm)" placeholder="Enter the value" required="required" step="any"  />
+        <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br> {{ prediction_text }}
+</center>  
+</div>
+</body> 
+</html>
