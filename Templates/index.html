@@ -15,15 +15,15 @@
 <center> 
    <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">        
-    	<input type="number" name="Nitrogen" placeholder="Enter a value(Example:50)" required="required" />
+    	<input type="number" name="N" placeholder="Enter a value(Example:50)" required="required" />
     	<br>
-        <input type="number" name="Phosphorous" placeholder="Enter a value(Example:50)" required="required" step="any" />
+        <input type="number" name="P" placeholder="Enter a value(Example:50)" required="required" step="any" />
         <br>
-		<input type="number" name="Pottasium" placeholder="Enter a value(Example:50)" required="required"  step="any" />
+		<input type="number" name="K" placeholder="Enter a value(Example:50)" required="required"  step="any" />
 		<br>
-        <input type="number" name="ph level" placeholder="Enter the value" required="required"  step="any" />
+        <input type="number" name="ph" placeholder="Enter the value" required="required"  step="any" />
         <br>
-        <input type="number" name="Rainfall (in mm)" placeholder="Enter the value" required="required" step="any"  />
+        <input type="number" name="Rainfall" placeholder="Enter the value" required="required" step="any"  />
         <br>
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
